@@ -41,7 +41,7 @@ def plot_acf(data):
     ax1 = fig.add_subplot(211)
     fig = sm.graphics.tsa.plot_acf(data.dropna(), lags=40, ax=ax1)
     plt.title('Autocorrelation - Definition of p term - AR')
-    plt.savefig('figures/acf.jpg')
+    plt.savefig('anomalous_detection_NASA/figures/acf.jpg')
     plt.clf()
     plt.cla()
     plt.close()
@@ -52,7 +52,7 @@ def plot_pacf(data):
     fig = sm.graphics.tsa.plot_pacf(data.dropna(), lags=40, ax=ax1)
     plt.title('Partial Autocorrelation - Definition of q term - MA')
 
-    plt.savefig('figures/pacf.jpg')
+    plt.savefig('anomalous_detection_NASA/figures/pacf.jpg')
     plt.clf()
     plt.cla()
     plt.close()
@@ -63,7 +63,7 @@ def plot_series (df, serie_type):
     fig = plt.figure(figsize=(12, 8))
     ax1 = fig.add_subplot(211)
     fig = ax1.plot(df); ax1.set_title(serie_type)
-    name = 'figures/series_'+ serie_type+'.jpg'
+    name = 'anomalous_detection_NASA/figures/series_'+ serie_type+'.jpg'
     plt.savefig(name)
     plt.clf()
     plt.cla()
@@ -119,7 +119,7 @@ def plot_difference_model(test_set, pred_set, algo):
     # legend
     plt.legend(['value', 'prediction'])
 
-    plt.savefig('figures/print_compar'+ algo+'.jpg')
+    plt.savefig('anomalous_detection_NASA/figures/print_compar'+ algo+'.jpg')
 
 
 def plot_bar_chart(x,y, title):

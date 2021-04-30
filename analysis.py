@@ -3,7 +3,7 @@ import arima_utils as ar_utils
 import time as times
 import psutil
 
-file = 'resources/Averaged_BearingTest_Dataset.csv'
+file = 'anomalous_detection_NASA/resources/Averaged_BearingTest_Dataset.csv'
 header_set = ['datetime', 'Bearing1']
 drop_header_set = []
 check_ds = False
